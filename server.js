@@ -26,6 +26,7 @@ const server = net.createServer((socket) => {
     socket.on('data', (data) => {
         const message = data.toString();
         console.log(`Alınan veri: ${message}`);
+        socket.write("|L|SK|1||0000001||")
     });
 
     // Bağlantı sonlandığında
